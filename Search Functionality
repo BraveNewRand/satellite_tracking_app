@@ -1,0 +1,17 @@
+# this is a JS pseudo code 
+
+function searchSatellites(searchTerm) {
+    const lowercasedTerm = searchTerm.toLowerCase();
+    const filteredSatellites = allSatellites.filter(satellite =>
+        satellite.name.toLowerCase().includes(lowercasedTerm)
+    );
+    displaySatellites(filteredSatellites);
+}
+
+function displaySatellites(satellites) {
+    if (satellites.length === 0) {
+        showNoResultsMessage();
+    } else {
+        renderSatellitesOnMap(satellites);
+    }
+}
